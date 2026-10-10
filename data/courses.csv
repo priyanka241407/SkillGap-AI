@@ -1,0 +1,41 @@
+id,title,platform,skill,level,description,url,link_text
+1,Python for Everybody,Coursera,Python,Beginner,Learn Python from scratch - perfect for beginners. Covers basics to file handling.,https://www.coursera.org/specializations/python,View Course
+2,Python Tutorial for Beginners,YouTube,Python,Beginner,Full Python tutorial for absolute beginners by Programming with Mosh.,https://www.youtube.com/watch?v=_uQrJ0TkZlc,Watch Video
+3,Python Full Course - freeCodeCamp,YouTube,Python,Beginner,Complete 4-hour Python course on freeCodeCamp YouTube channel.,https://www.youtube.com/watch?v=rfscVS0vtbw,Watch Video
+4,Kaggle Python Course,Kaggle,Python,Beginner,Free hands-on Python course on Kaggle with exercises.,https://www.kaggle.com/learn/python,Start Learning
+5,Pandas Tutorial,YouTube,Pandas,Intermediate,Pandas tutorial for data analysis by Corey Schafer.,https://www.youtube.com/watch?v=ZyhVh-qRZPA,Watch Video
+6,Kaggle Pandas Course,Kaggle,Pandas,Beginner,Free Pandas micro-course on Kaggle with real datasets.,https://www.kaggle.com/learn/pandas,Start Learning
+7,NumPy Tutorial,YouTube,NumPy,Beginner,NumPy crash course for beginners.,https://www.youtube.com/watch?v=QUT1VHiLmmI,Watch Video
+8,Machine Learning Crash Course,Google,Machine Learning,Beginner,Free ML course by Google with TensorFlow exercises.,https://developers.google.com/machine-learning/crash-course,Start Learning
+9,Machine Learning by Andrew Ng,Coursera,Machine Learning,Intermediate,The most famous ML course in the world - highly recommended.,https://www.coursera.org/specializations/machine-learning-introduction,View Course
+10,Intro to Machine Learning,Kaggle,Machine Learning,Beginner,Quick hands-on ML course by Kaggle.,https://www.kaggle.com/learn/intro-to-machine-learning,Start Learning
+11,Scikit-learn Tutorial,YouTube,Scikit-learn,Intermediate,Complete Scikit-learn tutorial for machine learning.,https://www.youtube.com/watch?v=pqNCD_5r0IU,Watch Video
+12,Statistics for Data Science,YouTube,Statistics,Beginner,Statistics concepts explained for data science beginners.,https://www.youtube.com/watch?v=xxpc-HPKN28,Watch Video
+13,SQL for Beginners,freeCodeCamp,SQL,Beginner,Full SQL tutorial for beginners on freeCodeCamp YouTube.,https://www.youtube.com/watch?v=HXV3zeQKqGY,Watch Video
+14,SQL Tutorial - Mode,Mode,SQL,Beginner,Free interactive SQL tutorial by Mode Analytics.,https://mode.com/sql-tutorial/,Start Learning
+15,TensorFlow Tutorial,YouTube,TensorFlow,Intermediate,TensorFlow 2.0 tutorial for beginners.,https://www.youtube.com/watch?v=tPYj3fFJGjk,Watch Video
+16,Deep Learning Specialization,Coursera,Deep Learning,Advanced,Comprehensive deep learning course by Andrew Ng.,https://www.coursera.org/specializations/deep-learning,View Course
+17,HTML & CSS Full Course,YouTube,HTML,Beginner,Complete HTML and CSS course for beginners by Dave Gray.,https://www.youtube.com/watch?v=mU6anWqZJcc,Watch Video
+18,CSS Flexbox Tutorial,YouTube,CSS,Beginner,Learn CSS Flexbox in 20 minutes.,https://www.youtube.com/watch?v=fYq5PXgSsbE,Watch Video
+19,JavaScript Full Course,freeCodeCamp,JavaScript,Beginner,JavaScript full course for beginners on freeCodeCamp.,https://www.youtube.com/watch?v=PkZNo7MFNFg,Watch Video
+20,React JS Full Course,YouTube,React,Intermediate,Complete React JS tutorial for beginners.,https://www.youtube.com/watch?v=4UZrsTqkcW4,Watch Video
+21,React - The Complete Guide,Udemy,React,Intermediate,Most popular React course on Udemy by Maximilian Schwarzmuller.,https://www.udemy.com/course/react-the-complete-guide-incl-redux/,View Course
+22,Node.js Tutorial,YouTube,Node.js,Intermediate,Node.js tutorial for beginners.,https://www.youtube.com/watch?v=TlB_eWDSMt4,Watch Video
+23,MongoDB Crash Course,YouTube,MongoDB,Beginner,MongoDB crash course for beginners.,https://www.youtube.com/watch?v=-56x56UppqQ,Watch Video
+24,Git and GitHub Tutorial,YouTube,Git,Beginner,Git and GitHub tutorial for beginners by freeCodeCamp.,https://www.youtube.com/watch?v=RGOj5yH7evk,Watch Video
+25,Data Science A-Z,Udemy,Data Science,Beginner,Real-life data science exercises on Udemy.,https://www.udemy.com/course/datascience/,View Course
+26,Excel Tutorial for Beginners,YouTube,Excel,Beginner,Microsoft Excel tutorial for beginners.,https://www.youtube.com/watch?v=rwbho0CgEAI,Watch Video
+27,Power BI Tutorial,YouTube,Power BI,Beginner,Power BI tutorial for beginners by Guy in a Cube.,https://www.youtube.com/watch?v=TmhQCQr_PCA,Watch Video
+28,Tableau Tutorial,YouTube,Tableau,Beginner,Tableau tutorial for beginners.,https://www.youtube.com/watch?v=TPMlZxRRaBQ,Watch Video
+29,Data Visualization with Python,Kaggle,Data Visualization,Intermediate,Data visualization course on Kaggle using Python libraries.,https://www.kaggle.com/learn/data-visualization,Start Learning
+30,PyTorch Tutorial,YouTube,PyTorch,Intermediate,PyTorch deep learning tutorial for beginners.,https://www.youtube.com/watch?v=c36lUUr864M,Watch Video
+31,NLP with Python,YouTube,NLP,Intermediate,Natural Language Processing with Python tutorial.,https://www.youtube.com/watch?v=X2vAabgKiuM,Watch Video
+32,Statistics and Probability,Khan Academy,Statistics,Beginner,Free statistics and probability course on Khan Academy.,https://www.khanacademy.org/math/statistics-probability,Start Learning
+33,AWS Cloud Practitioner,AWS,AWS,Beginner,Free AWS Cloud Practitioner Essentials course.,https://aws.amazon.com/training/learn-about/cloud-practitioner/,Start Learning
+34,Django Tutorial,YouTube,Django,Intermediate,Django web framework tutorial for beginners.,https://www.youtube.com/watch?v=F5mRW0jo-U4,Watch Video
+35,Flask Tutorial,YouTube,Flask,Beginner,Flask web framework crash course.,https://www.youtube.com/watch?v=Z1RJmh_OqeA,Watch Video
+36,Docker Tutorial,YouTube,Docker,Intermediate,Docker tutorial for beginners.,https://www.youtube.com/watch?v=3c-iBn73dDE,Watch Video
+37,Intermediate ML,Kaggle,Scikit-learn,Intermediate,Intermediate machine learning techniques on Kaggle.,https://www.kaggle.com/learn/intermediate-machine-learning,Start Learning
+38,Intro to Deep Learning,Kaggle,Deep Learning,Beginner,Introduction to deep learning course on Kaggle.,https://www.kaggle.com/learn/intro-to-deep-learning,Start Learning
+39,Feature Engineering,Kaggle,Data Science,Intermediate,Feature engineering course on Kaggle.,https://www.kaggle.com/learn/feature-engineering,Start Learning
+40,Computer Vision,Kaggle,Computer Vision,Intermediate,Computer Vision course with TensorFlow on Kaggle.,https://www.kaggle.com/learn/computer-vision,Start Learning

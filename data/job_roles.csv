@@ -1,0 +1,11 @@
+job_role,required_skills
+Data Scientist,"Python,Statistics,Machine Learning,Deep Learning,Pandas,NumPy,Matplotlib,Scikit-learn,SQL,TensorFlow,Data Visualization,Jupyter"
+Machine Learning Engineer,"Python,Machine Learning,Deep Learning,Scikit-learn,TensorFlow,PyTorch,NumPy,Pandas,SQL,Statistics,Git,Docker"
+Data Analyst,"Excel,SQL,Python,Pandas,Power BI,Statistics,Data Visualization,Tableau,NumPy,Matplotlib"
+Web Developer,"HTML,CSS,JavaScript,React,Git,Node.js,Bootstrap,REST API"
+Full Stack Developer,"HTML,CSS,JavaScript,React,Node.js,Express,MongoDB,SQL,Git,REST API,Bootstrap"
+AI Engineer,"Python,Machine Learning,Deep Learning,TensorFlow,PyTorch,NLP,Computer Vision,Scikit-learn,NumPy,Pandas,Git"
+Software Developer,"Python,Java,C++,Data Structures,Algorithms,Git,SQL,OOP,Problem Solving"
+Cloud Engineer,"AWS,Azure,Google Cloud,Linux,Docker,Kubernetes,Python,Networking,CI/CD"
+DevOps Engineer,"Linux,Docker,Kubernetes,CI/CD,AWS,Git,Python,Shell Scripting,Jenkins"
+Cybersecurity Analyst,"Networking,Linux,Python,Cryptography,Ethical Hacking,Firewalls,SIEM,Security Protocols"

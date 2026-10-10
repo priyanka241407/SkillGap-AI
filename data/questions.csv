@@ -1,0 +1,41 @@
+id,skill,question,option_a,option_b,option_c,option_d,correct
+1,Python,Which of the following is used to create a list in Python?,Square brackets [],Curly braces {},Parentheses (),Angle brackets <>,A
+2,Python,What keyword is used to define a function in Python?,func,def,function,define,B
+3,Python,Which Python library is commonly used for data analysis?,Pandas,React,HTML,CSS,A
+4,Python,What does 'len()' function do in Python?,Converts to lowercase,Returns the length of an object,Creates a new list,Sorts a list,B
+5,Python,Which of these is NOT a valid Python data type?,Integer,String,Boolean,Element,D
+6,Pandas,Which function is used to read a CSV file in Pandas?,pd.read_csv(),pd.open_csv(),pd.load_csv(),pd.import_csv(),A
+7,Pandas,How do you select a column named 'Age' from a DataFrame df?,df['Age'],df(Age),df{Age},df.column('Age'),A
+8,Pandas,Which method shows basic statistics of a DataFrame?,df.info(),df.head(),df.describe(),df.stats(),C
+9,NumPy,What does np.array() do?,Creates a NumPy array,Creates a Python list,Creates a dictionary,Imports NumPy,A
+10,NumPy,What is the shape of np.zeros((3,4))?,A 3x4 matrix of zeros,A 4x3 matrix of ones,A single number zero,A list of 12 zeros,A
+11,Machine Learning,What is supervised learning?,Learning with labeled data,Learning without data,Copying other models,Using rules manually,A
+12,Machine Learning,Which algorithm is used for classification problems?,Linear Regression,K-Means Clustering,Logistic Regression,PCA,C
+13,Machine Learning,What does overfitting mean?,Model performs well on training but poorly on test data,Model performs equally on all data,Model cannot learn from data,Model uses too little data,A
+14,Machine Learning,What is the purpose of train-test split?,To divide data into training and evaluation sets,To combine multiple datasets,To normalize data,To remove missing values,A
+15,Scikit-learn,Which function splits data into train and test sets in scikit-learn?,train_test_split(),data_split(),split_data(),divide_data(),A
+16,SQL,What does SELECT * FROM users mean?,Select all columns from users table,Delete users table,Create users table,Update users table,A
+17,SQL,Which SQL clause is used to filter rows?,WHERE,GROUP BY,ORDER BY,HAVING,A
+18,SQL,What does JOIN do in SQL?,Combines rows from two or more tables,Deletes duplicate rows,Creates a new table,Sorts data,A
+19,HTML,What tag is used to create a hyperlink?,<link>,<a>,<href>,<url>,B
+20,HTML,What does HTML stand for?,HyperText Markup Language,HighText Machine Language,HyperText Making Language,HighText Marking Language,A
+21,CSS,Which CSS property changes the text color?,color,font-color,text-color,foreground,A
+22,CSS,What does 'display: flex' do?,Makes container a flex container,Hides the element,Makes element full width,Changes font size,A
+23,JavaScript,Which keyword declares a variable in modern JavaScript?,var,let,int,string,B
+24,JavaScript,What does 'console.log()' do?,Prints to browser console,Saves data,Creates a loop,Defines a function,A
+25,React,What is JSX in React?,JavaScript XML - allows writing HTML in JS,A JavaScript library,A CSS framework,A database,A
+26,React,What hook manages state in React functional components?,useEffect,useState,useContext,useRef,B
+27,Statistics,What does 'mean' refer to?,Most frequent value,Middle value when sorted,Average of all values,Difference between max and min,C
+28,Statistics,What is standard deviation a measure of?,The average of data,Spread/variation in data,The middle value,The maximum value,B
+29,Deep Learning,What is a neural network?,A network of interconnected nodes inspired by the brain,A network of computers,A type of database,A programming language,A
+30,Deep Learning,What does CNN stand for?,Convolutional Neural Network,Connected Neural Node,Circular Neural Network,Cumulative Neural Network,A
+31,Git,What does 'git commit' do?,Saves changes to local repository,Sends changes to remote repository,Creates a new branch,Deletes a file,A
+32,Git,What command clones a repository?,git clone,git copy,git download,git get,A
+33,Data Visualization,Which library is commonly used for data visualization in Python?,Matplotlib,Django,Flask,Pandas,A
+34,Excel,What is the formula to calculate the average in Excel?,=AVERAGE(),=MEAN(),=AVG(),=SUM()/COUNT(),A
+35,Power BI,What is Power BI primarily used for?,Business data visualization and reports,Writing Python code,Building websites,Database management,A
+36,Node.js,What is Node.js?,JavaScript runtime environment,A CSS framework,A database,A Python library,A
+37,MongoDB,What type of database is MongoDB?,NoSQL document database,Relational database,Graph database,Flat file database,A
+38,TensorFlow,What is TensorFlow used for?,Machine learning and deep learning,Web development,Data cleaning,File management,A
+39,Data Science,What is the first step in a typical data science project?,Data collection and understanding,Model deployment,Data visualization,Final report,A
+40,NLP,What does NLP stand for?,Natural Language Processing,Neural Learning Protocol,Networked Language Processing,Normal Learning Procedure,A
