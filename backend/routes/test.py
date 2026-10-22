@@ -71,6 +71,14 @@ def submit_test():
            VALUES (?, ?, ?, ?, ?)""",
         (user_id, career_goal, result["score"], result["total"], json.dumps(answers))
     )
+
+    # Also save to assessment_attempts for comprehensive history tracking
+    db.execute(
+        """INSERT INTO assessment_attempts (user_id, assessment_type, skill_name, difficulty, total_questions, correct_answers, score_percentage, answers_detail)
+           VALUES (?, 'skill_test', ?, 'Comprehensive', ?, ?, ?, ?)""",
+        (user_id, career_goal or "Skill Assessment", result["total"], result["score"], result["percentage"], json.dumps(result["results"]))
+    )
+
     db.commit()
     db.close()
 

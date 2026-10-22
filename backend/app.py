@@ -16,6 +16,9 @@ from routes.profile import profile_bp
 from routes.resume import resume_bp
 from routes.test import test_bp
 from routes.analysis import analysis_bp
+from routes.assistant import assistant_bp
+from routes.quiz import quiz_bp
+from routes.assessment import assessment_bp
 
 # Import database initialization
 from database.db import init_db
@@ -44,6 +47,9 @@ def create_app():
     app.register_blueprint(resume_bp)
     app.register_blueprint(test_bp)
     app.register_blueprint(analysis_bp)
+    app.register_blueprint(assistant_bp)
+    app.register_blueprint(quiz_bp)
+    app.register_blueprint(assessment_bp)
 
     # ── Health check ───────────────────────────────────────────────────────────
     @app.route("/")

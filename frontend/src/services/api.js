@@ -55,3 +55,20 @@ export const getHistory = () => API.get("/analysis/history");
 export const deleteHistoryItem = (id) => API.delete(`/analysis/history/${id}`);
 export const clearAllHistory = () => API.delete("/analysis/history");
 export const getDashboard = () => API.get("/analysis/dashboard");
+
+// ── Career Assistant ──────────────────────────────────────────────────────────
+export const sendAssistantMessage = (message, history = []) =>
+  API.post("/assistant/chat", { message, history });
+export const getAssistantSuggestions = () =>
+  API.get("/assistant/suggestions");
+
+// ── Practice Quiz ─────────────────────────────────────────────────────────────
+export const getQuizTopics = () => API.get("/quiz/topics");
+export const getQuizQuestions = (params) => API.get("/quiz/questions", { params });
+export const submitQuiz = (data) => API.post("/quiz/submit", data);
+
+// ── Assessment History ────────────────────────────────────────────────────────
+export const getAssessmentHistory = (params) => API.get("/assessment/history", { params });
+export const getAssessmentDetail = (id) => API.get(`/assessment/history/${id}`);
+export const deleteAssessmentAttempt = (id) => API.delete(`/assessment/history/${id}`);
+

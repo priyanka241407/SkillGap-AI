@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
 import { AppLayout, ProtectedRoute } from "./components/Layout";
 import { Toaster } from "react-hot-toast";
 
@@ -11,16 +12,20 @@ import ProfilePage from "./pages/ProfilePage";
 import ResumePage from "./pages/ResumePage";
 import TestPage from "./pages/TestPage";
 import AnalysisPage from "./pages/AnalysisPage";
+import CareerAssistantPage from "./pages/CareerAssistantPage";
+import PracticeQuizPage from "./pages/PracticeQuizPage";
+import AssessmentHistoryPage from "./pages/AssessmentHistoryPage";
 import CoursesPage from "./pages/CoursesPage";
 import RoadmapPage from "./pages/RoadmapPage";
 import HistoryPage from "./pages/HistoryPage";
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
-        <Routes>
+    <ThemeProvider>
+      <AuthProvider>
+        <Router>
+          <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
+          <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
@@ -78,6 +83,36 @@ function App() {
             }
           />
           <Route
+            path="/assistant"
+            element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <CareerAssistantPage />
+                </AppLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <PracticeQuizPage />
+                </AppLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/assessment-history"
+            element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <AssessmentHistoryPage />
+                </AppLayout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/courses"
             element={
               <ProtectedRoute>
@@ -110,6 +145,7 @@ function App() {
         </Routes>
       </Router>
     </AuthProvider>
+    </ThemeProvider>
   );
 }
 

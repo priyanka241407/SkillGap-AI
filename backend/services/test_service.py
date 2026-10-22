@@ -21,6 +21,7 @@ def load_all_questions() -> list:
             questions.append({
                 "id": int(row["id"]),
                 "skill": row["skill"].strip(),
+                "difficulty": row.get("difficulty", "Beginner").strip(),
                 "question": row["question"].strip(),
                 "options": {
                     "A": row["option_a"].strip(),
@@ -29,6 +30,8 @@ def load_all_questions() -> list:
                     "D": row["option_d"].strip(),
                 },
                 "correct": row["correct"].strip().upper(),
+                "explanation": row.get("explanation", "").strip(),
+                "why_wrong": row.get("why_wrong", "").strip(),
             })
     return questions
 
@@ -94,11 +97,14 @@ def evaluate_test(answers: dict) -> dict:
         results.append({
             "id": q["id"],
             "skill": q["skill"],
+            "difficulty": q.get("difficulty", "Beginner"),
             "question": q["question"],
             "options": q["options"],
             "chosen": chosen.upper(),
             "correct": q["correct"],
             "is_correct": is_correct,
+            "explanation": q.get("explanation", ""),
+            "why_wrong": q.get("why_wrong", ""),
         })
 
     return {

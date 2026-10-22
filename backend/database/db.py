@@ -125,6 +125,36 @@ def init_db():
         )
     """)
 
+    # ── assessment_attempts ───────────────────────────────────────────────────
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS assessment_attempts (
+            id                INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id           INTEGER NOT NULL,
+            assessment_type   TEXT    NOT NULL, -- 'skill_test' or 'practice_quiz'
+            skill_name        TEXT    NOT NULL,
+            difficulty        TEXT    DEFAULT 'All',
+            total_questions   INTEGER NOT NULL,
+            correct_answers   INTEGER NOT NULL,
+            score_percentage  REAL    NOT NULL,
+            answers_detail    TEXT,             -- JSON string of detailed results
+            completed_at      TEXT    DEFAULT (datetime('now')),
+            FOREIGN KEY (user_id) REFERENCES users(id)
+        )
+    """)
+
+    # Sync past tests from test_results into assessment_attempts if not already synced
+    cursor.execute("SELECT COUNT(*) FROM assessment_attempts WHERE assessment_type = 'skill_test'")
+    existing_synced = cursor.fetchone()[0]
+    if existing_synced == 0:
+        cursor.execute("SELECT id, user_id, career_goal, score, total, answers, taken_at FROM test_results")
+        past_tests = cursor.fetchall()
+        for t in past_tests:
+            pct = round((t["score"] / t["total"] * 100) if t["total"] and t["total"] > 0 else 0, 1)
+            cursor.execute("""
+                INSERT INTO assessment_attempts (user_id, assessment_type, skill_name, difficulty, total_questions, correct_answers, score_percentage, answers_detail, completed_at)
+                VALUES (?, 'skill_test', ?, 'Comprehensive', ?, ?, ?, ?, ?)
+            """, (t["user_id"], t["career_goal"] or "Skill Assessment", t["total"] or 0, t["score"] or 0, pct, t["answers"], t["taken_at"]))
+
     conn.commit()
     conn.close()
     print("Database initialized successfully.")

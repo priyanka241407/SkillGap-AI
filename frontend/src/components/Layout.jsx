@@ -1,6 +1,28 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { BrainCircuit, LayoutDashboard, FileText, BarChart2, BookOpen, Map, History, LogOut, User, ChevronRight } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
+import { BrainCircuit, LayoutDashboard, FileText, BarChart2, BookOpen, Map, History, LogOut, User, Bot, Sun, Moon, HelpCircle, ClipboardList } from "lucide-react";
+
+/**
+ * Reusable Theme Toggle button with Sun/Moon icon and accessible label/tooltip.
+ */
+export function ThemeToggle({ showLabel = false, className = "" }) {
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <button
+      onClick={toggleTheme}
+      className={`theme-toggle-btn ${className}`}
+      title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      aria-label={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+      type="button"
+    >
+      {isDark ? <Sun size={17} className="theme-icon sun" /> : <Moon size={17} className="theme-icon moon" />}
+      {showLabel && <span>{isDark ? "Light Mode" : "Dark Mode"}</span>}
+    </button>
+  );
+}
 
 /**
  * Sidebar navigation shown inside the authenticated app layout.
@@ -22,9 +44,12 @@ export function Sidebar() {
     { to: "/dashboard", icon: <LayoutDashboard size={18} />, label: "Dashboard" },
     { to: "/resume", icon: <FileText size={18} />, label: "Resume & Skills" },
     { to: "/analysis", icon: <BarChart2 size={18} />, label: "Skill Gap Analysis" },
+    { to: "/quiz", icon: <HelpCircle size={18} />, label: "Practice Quiz" },
+    { to: "/assessment-history", icon: <ClipboardList size={18} />, label: "Assessment History" },
+    { to: "/assistant", icon: <Bot size={18} />, label: "Career Assistant" },
     { to: "/courses", icon: <BookOpen size={18} />, label: "Courses" },
     { to: "/roadmap", icon: <Map size={18} />, label: "My Roadmap" },
-    { to: "/history", icon: <History size={18} />, label: "History" },
+    { to: "/history", icon: <History size={18} />, label: "Analysis History" },
     { to: "/profile", icon: <User size={18} />, label: "Profile" },
   ];
 
@@ -50,7 +75,8 @@ export function Sidebar() {
         ))}
       </nav>
 
-      <div style={{ marginTop: "auto", paddingTop: "24px", borderTop: "1px solid var(--border)", marginTop: "32px" }}>
+      <div style={{ marginTop: "auto", paddingTop: "20px", borderTop: "1px solid var(--border)", marginTop: "28px", display: "flex", flexDirection: "column", gap: "8px" }}>
+        <ThemeToggle showLabel={true} className="sidebar-theme-toggle" />
         <button className="sidebar-link" onClick={handleLogout} style={{ color: "var(--danger)" }}>
           <LogOut size={18} />
           Logout
@@ -82,6 +108,7 @@ export function Navbar() {
         </ul>
 
         <div className="navbar-actions">
+          <ThemeToggle />
           {user ? (
             <Link to="/dashboard" className="btn btn-primary btn-sm">
               <LayoutDashboard size={15} /> Dashboard
@@ -131,6 +158,7 @@ function AppNavbar() {
           <span style={{ fontSize: "14px", color: "var(--text-secondary)" }}>
             👋 {user?.name}
           </span>
+          <ThemeToggle />
           <button
             className="btn btn-ghost btn-sm"
             onClick={() => { logoutUser(); navigate("/"); }}

@@ -23,7 +23,11 @@ export function LoginPage() {
       toast.success("Welcome back!");
       navigate("/dashboard");
     } catch (err) {
-      toast.error(err.response?.data?.error || "Login failed.");
+      if (!err.response) {
+        toast.error("Cannot connect to server. Please make sure the backend is running on port 5000.");
+      } else {
+        toast.error(err.response?.data?.error || "Login failed.");
+      }
     } finally {
       setLoading(false);
     }
@@ -93,7 +97,11 @@ export function RegisterPage() {
       toast.success("Account created successfully!");
       navigate("/profile"); // Direct to profile to set career goal
     } catch (err) {
-      toast.error(err.response?.data?.error || "Registration failed.");
+      if (!err.response) {
+        toast.error("Cannot connect to server. Please make sure the backend is running on port 5000.");
+      } else {
+        toast.error(err.response?.data?.error || "Registration failed.");
+      }
     } finally {
       setLoading(false);
     }
